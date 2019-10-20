@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,54 +7,119 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/heading_label"
+    <ImageView
+        android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif"
-        android:text="Search Bar"
-        android:textColor="#555555"
-        android:textSize="24sp"
-        android:layout_alignParentLeft="true" />
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_notifications_none"
+        tools:ignore="VectorDrawableCompat" />
 
     <EditText
-        android:id="@+id/search_field"
+        android:id="@+id/editText10"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/heading_label"
-        android:layout_below="@+id/heading_label"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_toStartOf="@+id/search_btn"
-        android:background="@drawable/search_layout"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:fontFamily="sans-serif"
-        android:hint="Search here"
         android:inputType="textPersonName"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="10dp"
-        android:textColor="#999999"
-        android:textSize="16sp"
-        android:layout_alignLeft="@+id/heading_label"
-        android:layout_toLeftOf="@+id/search_btn" />
+        android:text="Name"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/search_btn"
+    <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/search_field"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/search_field"
-        android:layout_marginRight="30dp"
-        android:background="@android:color/background_light"
-        app:srcCompat="@mipmap/search_button"
-        android:layout_alignParentRight="true" />
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText10"
+        app:layout_constraintVertical_bias="0.037"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="170dp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="170dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="170dp" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="170dp" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="170dp" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="170dp" />
 
 
-</RelativeLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
